@@ -526,4 +526,7 @@ class Boa implements Acciones{
 
 $boa1=new Boa;
 $boa1->moverse();
+
+echo "<hr>";
+
 ?>
