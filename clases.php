@@ -450,16 +450,19 @@ class Entrante extends Plato
 $plato2 = new Entrante("nombre entrante", "desc entrante", "media");
 $plato2->setPrecio(20);
 $plato2->info();
+
+echo "<hr>";
+
 // Clase abstracta
 abstract class CocheAbstract
 {
-    function abstract getRuedas(){};
+    abstract public function getRuedas();
 }
 
 // Interfaces
 interface Automovil{
-    public function getTipo(){};
-    public function getRuedas(){};
+    public function getTipo();
+    public function getRuedas();
 }
 
 class Coche implements Automovil
@@ -480,7 +483,7 @@ class Moto implements Automovil
         echo "2";
     }
 }
-// Clase con funcion public static
+// Clase con funcion public STATIC
 
 class greeting{
     public static function welcome(){
