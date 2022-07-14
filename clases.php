@@ -492,4 +492,38 @@ class greeting{
 }
 
 greeting::welcome();
+
+// interfaz acciones que tenga función moverse y otra comer
+echo "<hr>";
+
+interface Acciones{
+    public function moverse();
+    public function comer();
+}
+
+class Gato1 implements Acciones
+{
+    public function moverse(){
+        echo "El gato se mueve sigilosamente";
+    }
+    public function comer(){
+        echo "El gato come ratones";
+    }
+}
+
+$gato1=new Gato1;
+$gato1->moverse();
+echo "<hr>";
+
+class Boa implements Acciones{
+    public function moverse(){
+        echo "La boa repta";
+    }
+    public function comer(){
+        echo "la boa come ratones pero sin masticar";
+    }
+}
+
+$boa1=new Boa;
+$boa1->moverse();
 ?>
