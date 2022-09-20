@@ -8,14 +8,99 @@
     <title>Document</title>
 </head>
 <body>
-    <p>Hola</p>
-    <p>Hola</p>
-    <button>A</button>
+    <!-- <p id="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam itaque nam asperiores, impedit dicta distinctio eveniet veniam recusandae corporis beatae commodi quisquam. Eius non saepe ipsa modi, beatae rem quos.</p>
+    <p id="p2">Hola</p>
+    <p id="p3">Hola</p>
+    <button id="a">Ocultar</button>
+    <button id="b">Mostrar</button>
+    <div id="div1">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, sunt quam et qui repudiandae nam at, libero aliquid eum corrupti officiis ipsum earum, aspernatur soluta. Nemo exercitationem a odio minima?</p>
+    </div>
+    <img src="C:/xampp/htdocs/editorial/images/pic01.jpg" alt="" id="img1">
+    <ul id="lista">
+        <li>a</li>
+        <li>a</li>
+    </ul> -->
+
+    <ul id="lista2"></ul>
+    <input type="text" name="texto" id="texto">
+    <button id="enviar">Enviar</button>
     <script>
+
         $(document).ready(function() {
-            $("button").click(function() {
-                $("p").hide();
-            })
+            // $("#a").click(function() {
+            //     $("#p1").hide();
+            // });
+
+            // $("#a").on("click",function() {
+            //     $("#p1").hide();
+            // });
+
+            // $("#a").on({
+            //     click: function(){
+            //         $("#p1").hide(50);
+            //     },
+            //     dblclick: function(){
+            //         $("#p1").show(50);
+            //     }
+            // });
+
+            // $("#a").click(function() {
+            //     $("#div1").hide();
+            // });
+            // $("#b").click(function() {
+            //     $("#div1").show();
+            // });
+
+            // $("#a").on({
+            //     mouseenter: function(){
+            //         $("#img1").fadeOut(200);
+            //     },
+            //     mouseleave: function(){
+            //         $("#img1").fadeIn(200); 
+            //     }
+            // });
+
+            // $("#img1").on({
+            //     mouseenter: function(){
+            //         $("#img1").fadeTo(500, "0.4");
+            //     },
+            //     mouseleave: function(){
+            //         $("#img1").fadeTo(500, "1");
+            //     }
+            // });
+
+            // $("#a").click(function() {
+            //     $("#img1").toggle("1000");
+            // });
+
+            // $("#a").click(function() {
+            //     $("#p1").text("Hello world!");
+            // });
+
+            // $("#a").click(function() {
+            //     $("#lista").append("<li>Hello world!</li>");
+            // });
+
+            // $("#a").click(function() {
+            //     $("#lista").append("<li>Hello world!</li>");
+            // });
+
+            // $(document).on("click", "#lista li", function () {
+            //     $(this).remove();
+            // });
+            
+            $("#enviar").click(function() {
+                new_item=$("#texto").val();
+                if (new_item!= "") {   
+                    $("#lista2").append("<li>"+new_item+"</li>");
+                    $("#texto").val("");
+                }
+            });
+            
+            $(document).on("click", "#lista2 li", function() {
+                $(this).remove();
+            });
         });
     </script>
 </body>
