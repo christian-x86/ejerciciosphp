@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <div id="div1"></div>
+    <button id="disparador1">boton 1</button>
+    <button id="disparador2">boton 2</button>
+</body>
+<script>
+    document.getElementById("disparador1").addEventListener("click",cambia_estilo);
+    document.getElementById("disparador2").addEventListener("click",cambia_estilo2);
+
+
+    function cambia_estilo() {
+        const para = document.createElement("p");
+        para.innerHTML = "This is a paragraph.";
+        document.getElementById("div1").appendChild(para);
+    }
+    
+    function cambia_estilo2() {
+        document.getElementById("div1").innerHTML="";
+    }
+</script>
+</html>

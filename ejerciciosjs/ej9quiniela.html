@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //quiniela 14 partidos 1: gana local, 2: gana visitante, x: empate
+    var p_res=["1","2","X"];
+    var partidos = new Array(14).fill("");
+    function quiniela() {
+        for (let i = 0; i < partidos.length; i++) {;
+            r=parseInt(Math.random()*3);
+            partidos[i]=p_res[r];
+        }
+        console.log(partidos);
+    }
+    quiniela();
+</script>
+</html>

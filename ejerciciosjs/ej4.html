@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" id="form1">
+        <input type="text" name="nombre" id="n"><span id="span1"></span>
+    </form>
+    <button id="enviar">enviar</button>
+</body>
+<script>
+    document.getElementById("enviar").addEventListener("click",func_may);
+    
+    function func_may() {
+        var cadena = document.getElementById("n").value;
+        var arr=[];
+        for (const i of cadena) {
+            if (i==i.toUpperCase()) {
+                arr.push(true);
+            }else{
+                arr.push(false);
+            }
+        }
+        if (arr.every(func1)) {
+            console.log(arr);
+        }else{
+            console.log("no son todo mayusculas")
+        }
+    }
+    function func1(a) {
+        return a==true;
+    }
+</script>
+</html>

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, td{border: 1px solid black;}
+    </style>
+    <script>
+        document.writeln("Hola mundo");
+        function FuncA() {
+            if (document.getElementById("a").style.fontFamily=="Arial") {
+                console.log("1");
+                document.getElementById("a").style.fontFamily="Times";
+            }else{
+                console.log("2");
+                document.getElementById("a").style.fontFamily="Arial";
+            }
+        }
+        
+        var hola = "variable hola";
+
+        function myFunction() {
+            var person = prompt("Please enter your name");
+            if (person != null) {
+                document.getElementById("nombre").innerHTML =
+                "Hello " + person + "! How are you today?";
+            }
+        }
+
+        function nombreprompt() {
+            var nombre = prompt("Introduce tu nombre");
+            var apellidos = prompt("Introduce tus apellidos");
+            if (nombre != "" || apellidos !="") {
+                document.getElementById("nombre1").innerHTML =
+                "Hola " + nombre + " " + apellidos + "!";
+            }
+        }
+
+        function numero() {
+            var n1 = parseInt(prompt("introduce un nuemro"));
+            var n2 = parseInt(prompt("introduce otro nuemro"));
+            if (isNaN(n1) || isNaN(n2)) {
+                document.getElementById("numero").innerHTML = "no es un numero";
+            }else if (n1>n2) {
+                document.getElementById("numero").innerHTML = "El mayor es "+n1;
+            }else if (n1<n2) {
+                document.getElementById("numero").innerHTML = "El mayor es "+n2;
+            } else  {
+                document.getElementById("numero").innerHTML = "Son iguales";
+            }
+        }
+        function edad() {
+            var edad=parseInt(prompt("indica tu edad"));
+            if (edad>=18) {
+                document.getElementById("edad").innerHTML="Mayor de edad";
+            }else{
+                document.getElementById("edad").innerHTML="Menor de edad";
+            }
+        }
+        function opciones() {
+            var op=prompt("eliga a, b o c:");
+            switch (op) {
+                case "a":
+                    document.getElementById("opciones").innerHTML="opcion a";
+                    break;
+                case "b":
+                    document.getElementById("opciones").innerHTML="opcion b";
+                    break;
+                case "c":
+                    document.getElementById("opciones").innerHTML="opcion c";
+                    break;
+                default:
+                    document.getElementById("opciones").innerHTML="Le paso con una operadora";
+                    break;
+            }
+        }
+        function cine() {
+            var dia=parseInt(prompt("dia (1-7)"));
+            var npers=parseInt(prompt("numero de personas"));
+            var resultado;
+            switch (dia) {
+                case 1:
+                    resultado=5*npers;
+                    break;
+                case 2:
+                    resultado=7*npers;
+                    break;
+                case 3:
+                    resultado=8*npers;
+                    break;
+                case 4:
+                    resultado=8*npers;
+                    break;
+                case 5:
+                    resultado=10*npers;
+                    break;
+                case 6:
+                    resultado=10*npers;
+                    break;
+                case 7:
+                    resultado=10*npers;
+                    break;
+            
+                default:
+                    break;
+            }
+            document.getElementById("cine").innerHTML=resultado+" €";
+        }
+        //lunes 5, martes 7, miercoles 8, jueves  8, vsd 10, pregunta dia, numero personas y dice cuanto pagas
+            function tablamult() {
+                var tabla = parseInt(window.prompt("0-9"));
+                for (let i = 0; i <= 10; i++) {
+                    document.writeln(i+"x"+tabla+"="+i*tabla+"<br><br>");
+                }
+            }
+            function h1a6() {
+                var resultado="";
+                for (let i = 1; i <= 6; i++) {
+                    resultado = resultado + "<h"+i+">Texto</h"+i+">";
+                }
+                document.getElementById("super").innerHTML=resultado;
+            }
+            function tabla10() {
+                var resultado="";
+                var a = prompt();
+                for (let i = 1; i <= a; i++) {
+                    resultado=resultado+"<tr><td>"+i+"</td></tr>";
+                }
+                document.getElementById("super").innerHTML="<table>"+resultado+"</table>";
+            }
+            function parrafo() {
+                var a = window.prompt();
+                var resultado="";
+                for (let i = 1; i <= a; i++) {
+                    resultado=resultado+"<p>"+"Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto  "+"</p>";
+                }
+                document.getElementById("super").innerHTML=resultado;
+            }
+            function columnas(){
+                var resultado ="";
+                var a = prompt();
+                for (let i = 1; i <= a; i++) {
+                    resultado=resultado+"<td>"+i+"</td>";
+                }
+                document.getElementById("super").innerHTML="<table><tr>"+resultado+"</tr></table>";
+            }
+            function filascolumnas(){
+                var resultado ="";
+                var a = parseInt(prompt("filas"));
+                var b = parseInt(prompt("columnas"));
+                for (let i = 1; i <= a; i++) {
+                    resultado = resultado+"<tr>";
+                    for (let c =1; c <= b; c++) {
+                        resultado=resultado+"<td>"+i+", "+c+"</td>"; 
+                    }
+                    resultado=resultado+"</tr>";
+                }
+                document.getElementById("super").innerHTML="<table>"+resultado+"</table>";
+            }
+            function while1(){
+                
+                var x ="";
+                do {
+                    x =parseInt(window.prompt(x));
+                } while (x!=6);
+                
+                document.getElementById("super").innerHTML=x;
+            }
+            function formulario(){
+                var i = 1;
+                do {
+                    i++;
+                    var u =window.prompt("user");
+                    var p =window.prompt("pass");
+                } while ((p != "a" || u!= "a")&&i<=3);
+            }
+            function mayor(x, y) {
+                if (x>y) {
+                    document.writeln(x+"es  mayor");
+                }else if(x<y){
+                    document.writeln(y+"es  mayor");
+                }else{
+                    document.writeln("son iguales");
+                }
+            }
+            function mayoredad(a){
+                if (a>=18) {
+                    return "mayor de edad";
+                }else{
+                    return "menor de edad";
+                }
+            }
+            function bienvenida(a){
+                document.writeln("bienvenido, "+a);
+            }
+            function parimpar(a) {
+                if (a%2==0) {
+                    return "es par";
+                }else{
+                    return "es impar";
+                }
+            }
+            function tiene(cadena) {
+                if (cadena.indexOf("ñ")!=-1) {
+                    document.writeln("contiene ñ");
+                }else{
+                    document.writeln("no contiene ñ");
+                }
+            }
+            function longitud(cadena){
+                return cadena.length;
+            }
+            //param lista de numeros y devuelva suma
+
+            var v = [1,2,3,4,5];
+
+            function nums(lista){
+                var x = 0;
+                for(n of lista){
+                    x+=n;
+                }
+                return x;
+            }
+            var v = [1,2,3,4,5];
+
+            function otra(lista){
+                var x = "";
+                for(n of lista){ 
+                    x+=n+"<br>";
+                }
+                return x;
+            }
+
+            cadena1="hola que tal"
+            function array1(cadena1) {
+                var a1=cadena1.split(" ");
+                var resultado="";
+                for (const palabra of a1) {
+                    resultado+=palabra+"<br>";
+                }
+               return resultado;
+            }
+    </script>
+</head>
+<body> 
+    <button onclick="FuncA()">boton a</button>
+    <p id="a">Hola mundo</p>
+    <!--
+    <h2 id="b"></h2>
+    <p id="nombre"></p>
+    <h1 id="nombre1"></h1>
+    <p id="numero"></p>
+    <p id="edad"></p>
+    <p id="opciones"></p>
+    <p id="cine"></p>
+
+    <div id="h1a6"></div>
+    <div id="tabla10"></div>
+    <div id="parrafo"></div>
+    -->
+    <div id="super"></div>
+    <button onclick="document.getElementById('b').innerHTML = 5 + 6">boton b</button>
+    <button onclick="alert(hola)">boton c</button>
+    <button onclick="prompt('D')">boton d</button>
+    <button onclick="myFunction()">boton e</button>
+    <button onclick="nombreprompt()">nombre y apellidos</button>
+    <button onclick="numero()">numero</button>
+    <button onclick="edad()">edad</button>
+    <button onclick="opciones()">opciones</button>
+    <button onclick="cine()">cine</button>
+    <button onclick="tablamult()">tablas</button>
+    <button onclick="h1a6()">h1 a h6</button>
+    <button onclick="tabla10()">tabla 10</button>
+    <button onclick="parrafo()">parrafo</button>
+    <button onclick="columnas()">columnas</button>
+    <button onclick="filascolumnas()">filas columnas</button>
+    <button onclick="while1()">while</button>
+    <button onclick="formulario()">formulario</button>
+    <button onclick="mayor(1,2)">mayor</button>
+    <button onclick="document.writeln(mayoredad(24))">mayoredad</button>
+    <button onclick="bienvenida(window.prompt())">bienvenido</button>
+    <button onclick="document.writeln(parimpar(parseInt(window.prompt())))">par impar</button>
+    <button onclick="tiene(window.prompt())">contiene ñ</button>
+    <button onclick="document.writeln(longitud(window.prompt()))">longitud</button>
+    <button onclick="document.writeln(nums(v));">suma</button>
+    <button onclick="document.writeln(otra(v));">br</button>
+    <button onclick="document.writeln(array1(cadena1));">cadena br</button>
+</body>
+</html>

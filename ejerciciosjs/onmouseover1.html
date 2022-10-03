@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #hola{
+            height: 300px;
+            width: 300px;
+            background-color: red;
+            margin: auto;
+        }
+    </style>
+    
+</head>
+<body>
+    
+    <div id="hola"></div>
+    
+</body>
+<script>function entra() {
+    document.getElementById("hola").style.backgroundColor="green";
+}
+
+var id = null;
+function myMove() {
+    var elem = document.getElementById("hola");
+    var pos = 0;
+    var red=255;
+    clearInterval(id);
+    id = setInterval(frame, 10);
+    function frame() {
+
+        if (pos >= 255) {
+            clearInterval(id);
+        } else {
+            pos++;
+            red--;
+            elem.style.backgroundColor="rgba("+red+","+pos+",0)";
+            document.getElementById("hola").innerHTML=pos+", "+red;
+        }
+    }
+}
+document.getElementById("hola").addEventListener("mouseover", myMove);</script>
+</html>

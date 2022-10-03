@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="reaparece">Pulsa para que reaparezcan</button>
+    <button id="boton">boton</button>
+    <input type="text" name="" id="texto">
+    <p id="parrafo">hola que tal</p>
+</body>
+<script>
+    document.getElementById("boton").addEventListener("mouseover",desaparece1);
+    document.getElementById("texto").addEventListener("mouseover",desaparece2);
+    document.getElementById("parrafo").addEventListener("mouseover",desaparece3);
+    document.getElementById("reaparece").addEventListener("click",reaparece);
+    function desaparece1() {
+        document.getElementById("boton").style.display="none";
+    }
+    function desaparece2() {
+        document.getElementById("texto").style.display="none";
+    }
+    function desaparece3() {
+        document.getElementById("parrafo").style.display="none";
+    }
+    function reaparece() {
+        document.getElementById("boton").style.display="";
+        document.getElementById("texto").style.display="";
+        document.getElementById("parrafo").style.display="";
+    }
+</script>
+</html>

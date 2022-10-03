@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .c_rojo{
+            background-color: red;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 20px;
+            left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="c_rojo" id="c"></div>
+    <button id="mover">mover</button>
+</body>
+<script>
+    document.getElementById("c").addEventListener("mouseover", func_verde);
+
+    document.getElementById("c").addEventListener("mouseout", func_rojo);
+
+    document.getElementById("mover").addEventListener("click", func_mover);
+
+    function func_verde() {
+        document.getElementById("c").style.backgroundColor="green";
+    }
+    function func_rojo() {
+        document.getElementById("c").style.backgroundColor="red";
+    }
+    function func_mover() {
+        document.getElementById("c").style.left="100px";
+        document.getElementById("c").style.width="200px";
+        document.getElementById("c").style.height="200px";
+    }
+</script>
+</html>

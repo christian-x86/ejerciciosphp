@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div.a, ul{
+            margin: auto;
+            display: block;
+            width: 17em;
+        }
+        .h{
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div><h1 class="h">To Do</h1></div>
+    <div class="a">
+        <form  id="formulario">
+            <input type="text" name="nombre" id="nombre">
+            
+        </form>
+        <button id="enviar">Enviar</button>
+    </div>
+    
+    <ul id="lista"></ul>
+    
+    <script>
+        document.getElementById("enviar").addEventListener("click",func_lista);
+        function func_lista() {
+
+            nombre=document.getElementById("nombre");
+
+            const elemento = document.createElement("li");
+            elemento.innerHTML = nombre.value;
+
+            document.getElementById("lista").appendChild(elemento);
+
+        }
+    </script>
+</body>
+</html>

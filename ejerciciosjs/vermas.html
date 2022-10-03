@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="corto">Lorem ipsum dolor sit amet...</p>
+    <p id="largo" style="display: none;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc a feugiat urna, placerat pharetra ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Phasellus non aliquam lorem. Mauris laoreet mi quis turpis sollicitudin, non convallis libero molestie. Donec sed dolor lacus. Sed ipsum nulla, ullamcorper quis eros et, mattis convallis urna. Vivamus placerat et risus at consequat. Aenean a felis justo. Curabitur nec molestie metus. Etiam pretium odio ac mauris viverra, sed faucibus ipsum viverra. Quisque venenatis non nibh nec lobortis. Mauris porttitor tristique dictum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+    <button id="vermas">Leer más</button>
+</body>
+<script>
+    document.getElementById("vermas").addEventListener("click",func_vermas);
+    function func_vermas() {
+        document.getElementById("corto").style.display="none";
+        document.getElementById("largo").style.display="";
+        document.getElementById("vermas").style.display="none";
+    }
+</script>
+</html>

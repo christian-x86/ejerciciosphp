@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .error{
+            border-color:  red;
+        }
+        .normal{
+
+        }
+    </style>
+</head>
+<body>
+    <form action="" method="get" id="formulario">
+        <input type="text" name="nombre" id="n" placeholder="nombre" class="normal">
+        <input type="number" name="edad" id="edad" placeholder="edad">
+        <input type="text" name="dni" id="dni" placeholder="dni">
+        <select name="sexo" id="sexo">
+            <option value="-1" disabled selected>Seleccione</option>
+            <option value="h">hombre</option>
+            <option value="m">mujer</option>
+        </select>
+        <input type="radio" name="a" value="a"><label for="a">a</label>
+        <input type="radio" name="a" value="b"><label for="a">b</label>
+        <input type="checkbox" name="check" value="check1">
+        <input type="checkbox" name="check" value="check2">
+        <span id="span"></span>
+    </form>
+    <button id="enviar">enviar</button>
+</body>
+<script>
+    document.getElementById("enviar").addEventListener("click", mostrar_datos);
+    function mostrar_datos() {
+        nombre=document.getElementById("n");
+        edad=document.getElementById("edad");
+        dni=document.getElementById("dni");
+        if (edad.value < 18 || edad.value > 65) {
+            document.getElementById("span").innerHTML=edad.value+" La edad tiene que estar entre 18 y 65";
+            document.getElementById("n").className="error";
+        }else if (dni.value.length != 9) {
+            window.alert(dni.value.length+" El dni tiene que tener 9 caracteres");
+        }
+
+        console.log(document.getElementById("sexo").value);
+        console.log(document.getElementById("sexo").selectedIndex);
+        console.log(document.getElementById("sexo").options[1]);
+        console.log(document.getElementById("sexo").options[document.getElementById("sexo").selectedIndex].text);
+        array_radio=document.getElementsByName("a");
+
+        for(indice of array_radio){
+            
+            if (indice.checked) {
+                console.log(indice.value);
+            }
+        }
+
+        console.log(document.querySelector("[name='a']").value);
+
+        array_check=document.getElementsByName("check");
+        var array_check2  = [];
+        for(indice of array_check){
+            
+            if (indice.checked) {
+                array_check2.push(indice.value);
+            }
+        }
+        console.log(array_check2);
+    }
+    const fecha = new Date();
+    const fecha2 = new Date(2022,11,25);
+    console.log(fecha);
+    const fecha3 = new Date(fecha2.getTime() - fecha.getTime());
+    s = fecha3/1000;
+    m=s/60;
+    h=m/60;
+    d=h/24;
+    a=d/365;
+    console.log((a));
+    console.log("dias: "+d); 
+
+
+    
+</script>
+</html>

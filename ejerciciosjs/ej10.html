@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    input{
+        width:20em;
+    }
+</style>
+<body>
+    <input type="text" name="" id="nombre">
+    <button id="enviar">Enviar</button>
+</body>
+<script>
+    document.getElementById("nombre").addEventListener("mouseenter",func_negrita);
+    document.getElementById("nombre").addEventListener("mouseleave",func_negrita);
+    document.getElementById("enviar").addEventListener("click",func_enviar);
+    function func_negrita() {
+        if (document.getElementById("nombre").style.fontWeight=="bold") {
+            document.getElementById("nombre").style.fontWeight="";
+        }else{
+            document.getElementById("nombre").style.fontWeight="bold";
+        }
+    }
+    function func_enviar() {
+        window.alert(document.getElementById("nombre").value);
+    }
+</script>
+</html>

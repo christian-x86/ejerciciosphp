@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div1" style="background-color: darkgrey; width: 100px; height: 100px;">
+        <p id="parrafo1">1</p>
+    </div>
+    <div id="div2" style="background-color: red; width: 100px; height: 100px;"></div>
+    <h1 id="h" style="display:inline ;">h1</h1>
+    <div id="div4" style="background-color: lightblue; width: 100px; height: 100px;">
+        <p id="parrafo2">1</p>
+    </div>
+</body>
+<script>
+    //1 click +2 ,doble click  *2
+    document.getElementById("div1").addEventListener("click",func_click);
+    document.getElementById("div1").addEventListener("dblclick",func_doble);
+    function func_click() {
+        valor = parseInt(document.getElementById("parrafo1").innerHTML);
+        document.getElementById("parrafo1").innerHTML=valor+2;
+    }
+    function func_doble() {
+        valor = parseInt(document.getElementById("parrafo1").innerHTML);
+        document.getElementById("parrafo1").innerHTML=valor*2;
+    }
+    
+    //mousedown y  mouse up rojo a amarillo mientras esta pulsado
+    document.getElementById("div2").addEventListener("mousedown",func_down);
+    document.getElementById("div2").addEventListener("mouseup",func_up);
+    function func_down() {
+        document.getElementById("div2").style.backgroundColor="yellow";
+    }
+    function func_up() {
+        document.getElementById("div2").style.backgroundColor="red";
+    }
+    
+    //mouse over y out letra azul sobre fondo amarillo
+    document.getElementById("h").addEventListener("mouseover",func_amarillo);
+    document.getElementById("h").addEventListener("mouseout",func_normal);
+    function func_amarillo() {
+        document.getElementById("h").style.color="yellow";
+        document.getElementById("h").style.backgroundColor="blue";
+    }
+    function func_normal() {
+        document.getElementById("h").style.color="";
+        document.getElementById("h").style.backgroundColor="";
+    }
+
+    //div que tiene fondo azul y un 1  y mousemove +1
+    document.getElementById("div4").addEventListener("mousemove",func_move);
+    function func_move() {
+        valor = parseInt(document.getElementById("parrafo2").innerHTML);
+        document.getElementById("parrafo2").innerHTML=valor+1;
+    }
+</script>
+</html>

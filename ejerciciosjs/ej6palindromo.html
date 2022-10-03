@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //palindromo
+    function palindromo(cadena) {
+        cadena = cadena.replace(/ /g,"");
+        console.log(cadena);
+        cadena_r=cadena.split("").reverse().join("");
+        var res = cadena.localeCompare(cadena_r, undefined, { sensitivity: 'base' });
+        if (res == 0) {
+            return true;
+        }else{
+            return false;
+        }
+    }
+    //var cadena=window.prompt("introduce cadena");
+    
+
+    var cadena = window.prompt("introduce palindromo");
+    console.log(palindromo(cadena));
+</script>
+</html>

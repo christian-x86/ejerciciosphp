@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var cadena = "Lorem ipsum dolor sit amet consectetur adipiscing elit";
+    var arr = cadena.split(" ");
+    console.log(arr);
+    console.log("cantidad de palabras: "+arr.length);
+    console.log("última palabra: " + arr[arr.length-1]);
+    arr.reverse();
+    console.log("inverso: "+arr.join(" "));
+    arr.sort((a, b) => a.localeCompare(b, undefined, { sensitivity: "base" }));
+    console.log("a-z: "+arr);
+    arr.reverse();
+    console.log("z-a: "+arr);
+</script>
+</html>

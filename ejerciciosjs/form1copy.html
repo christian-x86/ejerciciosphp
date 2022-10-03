@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action=""  id="formulario" >
+        <input type="text" name="nombre" id="nombre">
+        
+    </form>
+    <button id="enviar">Enviar</button>
+
+    <ul id="lista"></ul>
+    
+    <script>
+        document.getElementById("enviar").addEventListener("click",func_lista);
+        function func_lista() {
+
+            nombre=document.getElementById("nombre");
+
+            document.getElementById("lista").innerHTML+="<li>"+nombre.value+"<button class='close'>Eliminar</button></li>";
+            var borra =  document.getElementsByClassName("close");
+            console.log(borra);
+            for (const i of borra) {
+                console.log(borra[i]);
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+    //muestra si esta en el array.
+    var colores = ["rojo", "azul", "verde", "rosa"];
+    function func_colores(c){
+        
+        if (colores.indexOf(c)==-1) {
+            console.log("El color no se encuentra en el array")
+        }else{
+            console.log(c)
+        }
+    }
+
+    var c=window.prompt("introduce color");
+    func_colores(c);
+
+</script>
+</html>
